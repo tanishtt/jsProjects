@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="main">
+        <form >
+            <div id="search">
+                <input name="input_city" type="search" placeholder="Enter City" id="input-city">
+                <button type="submit" id="btn-search">Search</button>
+            </div>
+        </form>
+        
+        <div id="container">
+            <div id="upper">
+                <div class="upper-2">
+                    <div><i class="fa-solid fa-sun"></i> Sunrise : <span id="sunrise">0</span> a.m.</div>
+                    <div><i class="fa-solid fa-moon"></i> Sunset : <span id="sunset">0</span> p.m.</div>
+                </div>
+                <div class="upper-2">
+                    <div><i class="fa-solid fa-temperature-arrow-up"></i> Max-Temp : <span id="max-temp">0</span><sup> o</sup>C</div>
+                    <div><i class="fa-solid fa-temperature-arrow-down"></i> Min-Temp : <span id="min-temp">0</span><sup> o</sup>C</div>
+                </div>
+            </div>
+            <div id="middle">
+                <div class="mid">
+                    <div id="place">Search a city</div>
+                    <!-- <div id="time">
+                        <div>10 p.m.</div>
+                        <div>Monday</div>
+                    </div> -->
+                </div>
+                <div class="mid">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <span id="main-temp">0</span><sup> o</sup>C
+                </div>
+            </div>
+            <div id="lower">
+                <div class="lower-3">
+                    <div><i class="fa-solid fa-water"></i> Humidity</div>
+                    <div id="humidity"><span id="humidity1">0</span> %</div>
+                </div>
+                <div class="lower-3">
+                    <div><i class="fa-solid fa-wind"></i> Wind Speed</div>
+                    <div id="windspeed"><span id="windspeed1">0</span> km/hr</div>
+                </div>
+                <div class="lower-3">
+                    <div><i class="fa-solid fa-temperature-three-quarters"></i> Feels Like</div>
+                    <div id="feelslike"><span id="feelslike1">0</span><sup> o</sup>C</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
