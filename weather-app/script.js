@@ -9,7 +9,7 @@ document.getElementById("btn-search")
 });
 
 const updatetemp=(city)=>{
-    const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi';
+    const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`;
         const options = {
         method: 'GET',
         headers: {
@@ -24,9 +24,17 @@ const updatetemp=(city)=>{
     })
     .then((data)=>{
         console.log(data);
-                
-        document.querySelector("#sunrise").innerText=data.sunrise;
-        document.querySelector("#sunset").innerText=data.sunset;
+        
+                // Convert the Unix timestamp to a Date object
+        const sunriseDate = new Date(data.sunrise * 1000);
+        const sunsetDate = new Date(data.sunset * 1000);
+
+        // Get the time in a readable format (HH:MM:SS)
+        const sunriseTime = sunriseDate.toLocaleTimeString();
+        const sunsetTime = sunsetDate.toLocaleTimeString();
+
+        document.querySelector("#sunrise").innerText=sunriseTime;
+        document.querySelector("#sunset").innerText=sunsetTime;
 
         document.querySelector("#max-temp").innerText=data.max_temp;
         document.querySelector("#min-temp").innerText=data.min_temp;

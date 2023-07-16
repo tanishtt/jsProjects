@@ -124,19 +124,20 @@
 
 @media screen and (max-width:430px){
     .mid #place{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     #time{
         font-size: 1.5rem;
     }
     .lower-3{
         padding: 10px;
-        /* margin: 20px; */
+        margin: 15px 5px;
         font-size: 1rem;
         font-weight: 600;
     }
     .upper-2{
-        padding: 20px;
+        padding: 20px 10px;
+        
     }
 
 }
